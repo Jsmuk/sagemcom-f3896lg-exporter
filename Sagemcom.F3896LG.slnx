@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/Sagemcom.F3896LG.Api/Sagemcom.F3896LG.Api.csproj" />
+    <Project Path="src/Sagemcom.F3896LG.Client/Sagemcom.F3896LG.Client.csproj" />
     <Project Path="src/Sagemcom.F3896LG.Exporter/Sagemcom.F3896LG.Exporter.csproj" />
   </Folder>
 </Solution>
