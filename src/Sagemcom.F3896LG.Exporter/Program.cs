@@ -6,7 +6,7 @@ using Sagemcom.F3896LG.Exporter;
 
 var builder = WebApplication.CreateSlimBuilder();
 
-builder.WebHost.UseUrls("http://127.0.0.1:9090");
+builder.WebHost.UseUrls("http://127.0.0.1:9080");
 
 builder.Services.AddModemClient(options =>
 {

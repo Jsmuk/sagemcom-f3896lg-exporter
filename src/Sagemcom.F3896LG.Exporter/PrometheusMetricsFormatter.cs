@@ -11,34 +11,34 @@ public static class PrometheusMetricsFormatter
     {
         var sb = new StringBuilder();
         AppendChannelLocked(sb, downstream.Downstream, upstream.Upstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendChannelPower(sb, downstream.Downstream, upstream.Upstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendChannelFrequency(sb, downstream.Downstream, upstream.Upstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendChannelSnr(sb, downstream.Downstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendChannelRxMerDb(sb, downstream.Downstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendTotalCorrectedCodewordErrors(sb, downstream.Downstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendTotalUncorrectedCodewordErrors(sb, downstream.Downstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendT3TimeoutsTotal(sb, upstream.Upstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendT4TimeoutsTotal(sb, upstream.Upstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         AppendChannelMetadata(sb, upstream.Upstream, downstream.Downstream);
-        sb.AppendLine();
+        AppendPrometheusLine(sb, "");
 
         return sb.ToString();
     }
@@ -220,4 +220,6 @@ public static class PrometheusMetricsFormatter
         .Replace("\\", "\\\\", StringComparison.Ordinal)
         .Replace("\n", "\\n", StringComparison.Ordinal)
         .Replace("\"", "\\\"", StringComparison.Ordinal);
+    
+    
 }
